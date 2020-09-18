@@ -1,11 +1,14 @@
 /* color palette from https://www.color-hex.com/color-palettes */
+/* hex to css filter https://codepen.io/sosuke/pen/Pjoqqp */
 :root {
-	--darkest-color: #064273;
+	--darkest-color:  #ff6924;/*#064273;*/
 	--lightest-color: #def3f6;
 	--highlight-color: #ffffff;
-	--bright-color-1: #1da2d8;
-	--bright-color-2: #76b6c4;
-	--bright-color-3: #7fcdff;
+	--bright-color-1: #baff24; /*#1da2d8;*/
+	--bright-color-2: #baff24; /*#76b6c4;*/
+	--bright-color-3: #baff24;/*#7fcdff;*/
+	--color-circle-shape: #FFD725;
+	--svg-fill: black; /*#baff24;*/
 }
 
 body {
@@ -27,6 +30,7 @@ body {
 	width: 140px;
 	height: 140px;
 	position: relative;
+	background-color: var(--color-circle-shape) ;
 	overflow: hidden;
 	border-radius: 50%;
 	border: 3px solid var(--lightest-color);
@@ -74,6 +78,15 @@ a:hover {
 	margin: 3px;
 }
 
+.svg {
+		transform: scale(1);
+		transition: 0.3s ease-in-out;
+}
+.svg:hover {
+	fill: var(--svg-fill);
+	transform: scale(1.3);
+}
+  
 .dark {
 	background: var(--bright-color-1);
 }
